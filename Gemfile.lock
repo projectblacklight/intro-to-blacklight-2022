@@ -1,6 +1,5 @@
-GIT
-  remote: https://github.com/projectblacklight/blacklight.git
-  revision: 5fd9d8ac7a61f7133f322719964649d51d4970c5
+PATH
+  remote: /Users/cabeer/Projects/blacklight/blacklight
   specs:
     blacklight (8.0.0.alpha)
       globalid

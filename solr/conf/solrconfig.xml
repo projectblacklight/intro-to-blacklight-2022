@@ -6,7 +6,7 @@
 
   <abortOnConfigurationError>${solr.abortOnConfigurationError:true}</abortOnConfigurationError>
 
-  <luceneMatchVersion>6.1.0</luceneMatchVersion>
+  <luceneMatchVersion>9.0.0</luceneMatchVersion>
 
   <directoryFactory name="DirectoryFactory" class="${solr.directoryFactory:solr.StandardDirectoryFactory}"/>
 
@@ -47,7 +47,6 @@
           full_title_tsim
           short_title_tsim
           alternative_title_tsim
-          active_fedora_model_ssi
           title_tsim
           author_tsim
           subject_tsim
@@ -84,8 +83,6 @@
        <str name="facet">true</str>
        <str name="facet.mincount">1</str>
        <str name="facet.limit">10</str>
-       <str name="facet.field">active_fedora_model_ssi</str>
-       <str name="facet.field">subject_ssim</str>
 
        <str name="spellcheck">true</str>
        <str name="spellcheck.dictionary">default</str>
@@ -93,34 +90,10 @@
        <str name="spellcheck.extendedResults">true</str>
        <str name="spellcheck.collate">false</str>
        <str name="spellcheck.count">5</str>
-
      </lst>
     <arr name="last-components">
       <str>spellcheck</str>
     </arr>
-  </requestHandler>
-
-  <requestHandler name="permissions" class="solr.SearchHandler" >
-    <lst name="defaults">
-      <str name="facet">off</str>
-      <str name="echoParams">all</str>
-      <str name="rows">1</str>
-      <str name="q">{!raw f=id v=$id}</str> <!-- use id=666 instead of q=id:666 -->
-      <str name="fl">
-        id,
-        access_ssim,
-        discover_access_group_ssim,discover_access_person_ssim,
-        read_access_group_ssim,read_access_person_ssim,
-        edit_access_group_ssim,edit_access_person_ssim,
-        depositor_ti,
-        embargo_release_date_dtsi
-        inheritable_access_ssim,
-        inheritable_discover_access_group_ssim,inheritable_discover_access_person_ssim,
-        inheritable_read_access_group_ssim,inheritable_read_access_person_ssim,
-        inheritable_edit_access_group_ssim,inheritable_edit_access_person_ssim,
-        inheritable_embargo_release_date_dtsi
-      </str>
-    </lst>
   </requestHandler>
 
   <requestHandler name="standard" class="solr.SearchHandler">

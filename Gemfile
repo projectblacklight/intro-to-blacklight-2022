@@ -71,7 +71,7 @@ group :test do
   gem "webdrivers"
 end
 
-gem 'blacklight', github: 'projectblacklight/blacklight'
+gem 'blacklight', path: '/Users/cabeer/Projects/blacklight/blacklight'
 
 group :development, :test do
   gem "solr_wrapper", ">= 0.3"
