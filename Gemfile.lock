@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/projectblacklight/blacklight.git
-  revision: 4c3271b7e854c89490690130bc676308d77cf1c5
+  revision: 060b9440ee48383d8c6bce26d602c65d55ee3dd6
   specs:
     blacklight (8.0.0.alpha)
       globalid
