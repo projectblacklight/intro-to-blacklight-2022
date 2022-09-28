@@ -40,9 +40,9 @@ class CatalogController < ApplicationController
     #config.index.thumbnail_field = 'thumbnail_path_ss'
 
     # config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
-    # config.add_results_collection_tool(:sort_widget)
-    # config.add_results_collection_tool(:per_page_widget)
-    # config.add_results_collection_tool(:view_type_group)
+    config.add_results_collection_tool(:sort_widget)
+    config.add_results_collection_tool(:per_page_widget)
+    config.add_results_collection_tool(:view_type_group)
 
     # config.add_show_tools_partial(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
     # config.add_show_tools_partial(:email, callback: :email_action, validator: :validate_email_params)
