@@ -126,6 +126,8 @@ class CatalogController < ApplicationController
     # since we aren't specifying it otherwise.
 
     config.add_search_field 'all_fields', label: 'All Fields'
+    
+    config.add_sort_field 'score desc', label: 'relevance'
 
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
